@@ -1,20 +1,11 @@
 #! /usr/bin/env node
 
-import {argv} from "node:process";
-import Cleaner from "../Cleaner.mjs";
-import Reader from "../Reader.mjs";
-import { Writter } from "../Writter.mjs";
-import Settings from "../Settings.mjs";
+import CLI from "../src/CLI.mjs";
+import ReactCLI from "../react/ReactCLI.mjs";
+import Default from "../default/Default.mjs";
 
-Settings.runConfig();
-
-console.log(Cleaner.getTemplateNameFromParams(argv));
-
-let name = Cleaner.getTemplateNameFromParams(argv);
-let placeholders = Cleaner.getPlaceholdersFromParams(argv);
-let fileName = Cleaner.getFilenameFromParams(argv);
-
-let content = Reader.readTemplate(name);
-content = Reader.changePlaceholders(content, placeholders);
-
-Writter.writeFile(fileName, content);
+if(CLI.isFlag("react")) {
+    ReactCLI.run();
+} else {
+    Default.run();
+}

@@ -1,4 +1,4 @@
-export default class Placeholder{
+export default class Argument{
     constructor(name, value){
         this.name = name;
         this.value = value;
