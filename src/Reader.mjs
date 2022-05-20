@@ -13,14 +13,16 @@ export const Reader = {
         let templatePath = "";
 
         if(fs.existsSync(LOCAL_TEMPLATE_DIR)){
+            console.info("Reading templates from: " + LOCAL_TEMPLATE_DIR);
             templatePath = this.getTemplatePath(templateName, LOCAL_TEMPLATE_DIR);
         }
         else if(fs.existsSync(DEFAULT_TEMPLATE_DIR)){
+            console.info("Reading templates from: " + LOCAL_TEMPLATE_DIR);
             templatePath = this.getTemplatePath(templateName, DEFAULT_TEMPLATE_DIR);
             console.log(DEFAULT_TEMPLATE_DIR);
         }
         else{
-            console.error("Template directory not found: ");
+            console.error("Template directory not found for: "+ cwd());
             return "";
         }
 

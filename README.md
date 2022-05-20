@@ -33,3 +33,8 @@ react-component.temp
     export default ${component};
 
 all words inside curly brackets __${}__ are replaced for the same name arguments
+
+
+By default the cli going to search templates from ./node_modules/@makechtec/tezcatl/templates directory,
+if you want to add or edit this files you may to copy this directory to your root project path, automatically
+it will be taken before the default direction.
