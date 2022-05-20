@@ -1,15 +1,14 @@
 {
-  "name": "tasks",
+  "name": "@makechtec/tezcatl",
   "version": "1.0.0",
   "description": "copy the specific file and change variables from comand params",
   "main": "bin/index.js",
   "bin": {
-    "tezcatl": "./bin/index.mjs"
+    "tezcatl": "bin/index.mjs"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "makechtecnology",
   "license": "MIT",
   "devDependencies": {
@@ -18,5 +17,17 @@
     "babel-loader": "^8.2.5",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeldomp49/tezcatl.git"
+  },
+  "keywords": [
+    "react",
+    "templates"
+  ],
+  "bugs": {
+    "url": "https://github.com/angeldomp49/tezcatl/issues"
+  },
+  "homepage": "https://github.com/angeldomp49/tezcatl#readme"
 }
