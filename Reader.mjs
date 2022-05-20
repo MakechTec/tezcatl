@@ -2,7 +2,7 @@ import fs from "node:fs";
 
 export const Reader = {
     readTemplate: function(templateName) {
-        return fs.readFileSync("./templates/" + templateName + ".temp", "utf8");
+        return fs.readFileSync("templates/" + templateName + ".temp", "utf8");
     },
     changePlaceholders: function(content, placeholders) {
 
