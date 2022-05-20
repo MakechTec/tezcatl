@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { DEFAULT_TEMPLATE_DIR, LOCAL_TEMPLATE_DIR } from "./constants/constants.mjs";
+import { cwd } from "node:process";
 
 export const Reader = {
     fill: function(templateName, placeholders) {
@@ -16,9 +17,10 @@ export const Reader = {
         }
         else if(fs.existsSync(DEFAULT_TEMPLATE_DIR)){
             templatePath = this.getTemplatePath(templateName, DEFAULT_TEMPLATE_DIR);
+            console.log(DEFAULT_TEMPLATE_DIR);
         }
         else{
-            console.error("Template directory not found");
+            console.error("Template directory not found: ");
             return "";
         }
 
