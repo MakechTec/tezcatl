@@ -4,6 +4,9 @@ import {argv} from "node:process";
 import Cleaner from "../Cleaner.mjs";
 import Reader from "../Reader.mjs";
 import { Writter } from "../Writter.mjs";
+import Settings from "../Settings.mjs";
+
+Settings.runConfig();
 
 console.log(Cleaner.getTemplateNameFromParams(argv));
 
