@@ -1,5 +1,4 @@
-import {ARGUMENT_FLAG} from "./constants/constants.mjs";
-
+import {ARGUMENT_FLAG} from "../constants/constants.mjs";
 
 export const Pattern = {
     testStart: function(search, target){
@@ -13,7 +12,15 @@ export const Pattern = {
     testFlag: function(target){
         let start = new RegExp("^" + ARGUMENT_FLAG);
         return start.test(target);
-    }
+    },
+    testHasDirectory: function(target){
+        let start = new RegExp("\/");
+        return start.test(target);
+    },
+    replacePlaceholder: function(content, placeholder){
+        let pattern = new RegExp("\\$\\{" + placeholder.name + "\\}", "g");
+        return content.replace(pattern, placeholder.value);
+    },
 };
 
 export default Pattern;

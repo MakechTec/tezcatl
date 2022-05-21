@@ -1,4 +1,4 @@
-import Pattern from "./Pattern.mjs";
+import Pattern from "./pattern/Pattern.mjs";
 import Argument from "./Argument.mjs";
 import {argv} from "node:process";
 import {ARGUMENT_FLAG} from "./constants/constants.mjs";
@@ -23,9 +23,7 @@ export const CLI = {
                     .map((flag) => flag.replace(ARGUMENT_FLAG, ""))
                     .map((flag) => new Argument(flag, true));
     },
-    isFlag: function(name, params = argv) {
-        return params.find((param) => Pattern.testFlag(param)) === ARGUMENT_FLAG + name;
-    }
+    isFlag: (name, params = argv) => params.includes(ARGUMENT_FLAG + name)
     
 };
 

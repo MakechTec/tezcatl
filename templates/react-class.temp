@@ -1,0 +1,11 @@
+import React from 'react';
+
+export default class ${component} extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>${component}</h1>
+      </div>
+    );
+  }
+}

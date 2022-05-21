@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import { DEFAULT_TEMPLATE_DIR, LOCAL_TEMPLATE_DIR } from "./constants/constants.mjs";
 import { cwd } from "node:process";
+import Pattern from "./pattern/Pattern.mjs";
 
 export const Reader = {
     fill: function(templateName, placeholders) {
@@ -34,11 +35,11 @@ export const Reader = {
     },
     changePlaceholders: function(content, placeholders) {
 
+        let newContent = content;
         placeholders.forEach((placeholder) => {
-            let pattern = new RegExp("\\$\\{" + placeholder.name + "\\}", "g");
-            content = content.replace(pattern, placeholder.value);
+            newContent = Pattern.replacePlaceholder(newContent, placeholder);
         });
-        return content;
+        return newContent;
     }
 }
 
