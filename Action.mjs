@@ -1,6 +1,6 @@
 
 
-export default class ${component}{
+export default class Action{
     constructor(){
         
     }

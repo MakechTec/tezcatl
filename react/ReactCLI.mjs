@@ -4,7 +4,6 @@ import { Writter } from "../src/Writter.mjs";
 import * as reactConstants from "./constants.mjs";
 import BlockExtractor from "../src/blocks/BlockExtractor.mjs";
 import {argv} from "node:process";
-import { Console } from "node:console";
 
 export const ReactCLI = {
     run: function() {
