@@ -38,13 +38,3 @@ all words inside curly brackets __${}__ are replaced for the same name arguments
 By default the cli going to search templates from ./node_modules/@makechtec/tezcatl/templates directory,
 if you want to add or edit this files you may to copy this directory to your root project path, automatically
 it will be taken before the default direction.
-
-
-## Futuras mejoras ##
-
-Podemos agregar ifs anidados en un futuro
-
-igualmente para las iteraciones que se puedan anidar ya sean iteraciones dentro de condiciones y viceversa
-un número indeterminado de veces.
-
-cuando hay error de sintaxis no se muestra un mensaje que lo explique por lo que habrá que agregar uno.
