@@ -1,9 +1,0 @@
-@if(import)
-import React from 'react';
-@endif
-
-export const ${component} = () => {
-    return;
-};
-
-export default ${component};

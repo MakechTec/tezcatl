@@ -23,8 +23,15 @@ export const CLI = {
                     .map((flag) => flag.replace(ARGUMENT_FLAG, ""))
                     .map((flag) => new Argument(flag, true));
     },
-    isFlag: (name, params = argv) => params.includes(ARGUMENT_FLAG + name)
-    
+    isFlag: (name, params = argv) => params.includes(ARGUMENT_FLAG + name),
+    getAllArguments: function(params = argv) {
+        return params.filter( (param) => Pattern.testIsArg(param))
+                            .map( (param) => {
+                                let name = param.split("=")[0];
+                                let value = param.split("=")[1];
+                                return new Argument(name, value);
+                            })
+    }
 };
 
 export default CLI;

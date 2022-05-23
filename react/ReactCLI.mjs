@@ -4,7 +4,6 @@ import { Writter } from "../src/Writter.mjs";
 import * as reactConstants from "./constants.mjs";
 import BlockExtractor from "../src/blocks/BlockExtractor.mjs";
 import Pipe from "../src/pipe/Pipe.mjs";
-import {argv} from "node:process";
 
 export const ReactCLI = {
     run: function() {
@@ -18,7 +17,7 @@ export const ReactCLI = {
         })
         .addAction((content, placeholders) => {
             return Reader.changePlaceholders(content, placeholders);
-        }, [ component ])
+        }, CLI.getAllArguments())
         .addAction((content, filename) => {
             return Writter.writeFile(filename, content);
         }, component.value + reactConstants.EXTENSION);

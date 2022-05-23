@@ -4,11 +4,6 @@ import { cwd } from "node:process";
 import Pattern from "./pattern/Pattern.mjs";
 
 export const Reader = {
-    fill: function(templateName, placeholders) {
-        let content = this.readTemplate(templateName);
-        content = this.changePlaceholders(content, placeholders);
-        return content;
-    },
     readTemplate: function(templateName) {
 
         let templatePath = "";
@@ -20,7 +15,6 @@ export const Reader = {
         else if(fs.existsSync(DEFAULT_TEMPLATE_DIR)){
             console.info("Reading templates from: " + LOCAL_TEMPLATE_DIR);
             templatePath = this.getTemplatePath(templateName, DEFAULT_TEMPLATE_DIR);
-            console.log(DEFAULT_TEMPLATE_DIR);
         }
         else{
             console.error("Template directory not found for: "+ cwd());

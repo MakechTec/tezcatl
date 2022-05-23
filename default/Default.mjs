@@ -8,7 +8,7 @@ export const Default = {
     run: function() {
 
         let template = CLI.getArgumentValue("name");
-        let placeholders = CLI.getArgumentsGroup("placeholder");
+        let placeholders = CLI.getArgumentsGroup("ph");
         let file = CLI.getArgumentValue("file");
         let content = Reader.readTemplate(template.value);
         let p = new Pipe(content);

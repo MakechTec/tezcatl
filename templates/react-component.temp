@@ -1,7 +1,18 @@
 @if(import)
-import React from 'react';
+import ${import1} from '';
 @endif
 
+@if(class)
+export default class ${component} extends React.Component {
+	render() {
+		return (
+			<div>
+				<h1>${component}</h1>
+			</div>
+		);
+	}
+}
+@else
 export const ${component} = () => {
 	return (
 		<div>
@@ -11,3 +22,4 @@ export const ${component} = () => {
 };
 
 export default ${component};
+@endif

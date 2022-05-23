@@ -1,0 +1,22 @@
+@if(import)
+import ${import1} from '';
+@endif
+
+@if(class)
+export default class ${component}{
+
+}
+@endif
+@if(const)
+export const ${component} = {
+    
+};
+export default ${component};
+@endif
+@if(func)
+export const ${component} = () => {
+    return;
+};
+
+export default ${component};
+@endif

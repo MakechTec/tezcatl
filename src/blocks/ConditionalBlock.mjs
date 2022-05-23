@@ -43,11 +43,12 @@ export default class ConditionalBlock{
     extractElseContent(content){
         let newContent = content;
         let elseIndex = newContent.indexOf(ELSE_STATEMENT);
-        let notUsedString = newContent.substring(0, elseIndex);
+        let notUsedString = newContent.substring(0, elseIndex) + ELSE_STATEMENT;
+
         newContent = newContent.replace(notUsedString, "");
-        content.replace(ELSE_STATEMENT, "");
-        let endIfIndex = content.indexOf(END_IF_STATEMENT);
-        this.elsecontent = content.substring(0, endIfIndex);
+
+        let endIfIndex = newContent.indexOf(END_IF_STATEMENT);
+        this.elsecontent = newContent.substring(0, endIfIndex);
     }
 
     getFinalContent(){

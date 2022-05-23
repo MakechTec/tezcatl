@@ -9,6 +9,9 @@ export const Pattern = {
         let start = new RegExp("^" + search);
         return start.test(target);
     },
+    testIsArg: function(target){
+        return target.includes("=");
+    },
     testFlag: function(target){
         let start = new RegExp("^" + ARGUMENT_FLAG);
         return start.test(target);
