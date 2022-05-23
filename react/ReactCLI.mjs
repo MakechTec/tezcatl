@@ -15,6 +15,9 @@ export const ReactCLI = {
         p.addAction((content) => {
             return BlockExtractor.processConditions(content);
         })
+        .addAction((content) => {
+            return BlockExtractor.processIterations(content);
+        })
         .addAction((content, placeholders) => {
             return Reader.changePlaceholders(content, placeholders);
         }, CLI.getAllArguments())
