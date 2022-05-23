@@ -43,3 +43,8 @@ it will be taken before the default direction.
 ## Futuras mejoras ##
 
 Podemos agregar ifs anidados en un futuro
+
+igualmente para las iteraciones que se puedan anidar ya sean iteraciones dentro de condiciones y viceversa
+un número indeterminado de veces.
+
+cuando hay error de sintaxis no se muestra un mensaje que lo explique por lo que habrá que agregar uno.
