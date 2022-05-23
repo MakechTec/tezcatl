@@ -25,7 +25,8 @@ export const CLI = {
     },
     isFlag: (name, params = argv) => params.includes(ARGUMENT_FLAG + name),
     getAllArguments: function(params = argv) {
-        return params.filter( (param) => Pattern.testIsArg(param))
+        let paramsFiltered = params.slice(2);
+        return paramsFiltered.filter( (param) => Pattern.testIsArg(param))
                             .map( (param) => {
                                 let name = param.split("=")[0];
                                 let value = param.split("=")[1];

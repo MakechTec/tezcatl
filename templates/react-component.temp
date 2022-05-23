@@ -1,6 +1,6 @@
-@if(import)
-import ${import1} from '';
-@endif
+@foreach(import)
+import ${import} from '';
+@endforeach
 
 @if(class)
 export default class ${component} extends React.Component {
@@ -23,3 +23,19 @@ export const ${component} = () => {
 
 export default ${component};
 @endif
+
+@foreach(const)
+export const ${const} = () => {
+	return (
+		<div>
+			<h1>${const}</h1>
+		</div>
+	);
+};
+@endforeach
+
+@foreach(func)
+export const ${func} = () => {
+    return;
+};
+@endforeach
