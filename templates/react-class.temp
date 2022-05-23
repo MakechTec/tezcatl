@@ -1,11 +1,13 @@
+@if(import)
 import React from 'react';
+@endif
 
 export default class ${component} extends React.Component {
-  render() {
-    return (
-      <div>
-        <h1>${component}</h1>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<h1>${component}</h1>
+			</div>
+		);
+	}
 }

@@ -1,8 +1,0 @@
-
-export const abc = 'abc';
-
-@if(flaga)
-    export const optional = "optional";
-@endif
-
-export default abc;

@@ -11,8 +11,8 @@ export const Default = {
         let placeholders = CLI.getArgumentsGroup("placeholder");
         let file = CLI.getArgumentValue("file");
         let content = Reader.readTemplate(template.value);
-        
         let p = new Pipe(content);
+
         p.addAction((content) => {
             return BlockExtractor.processConditions(content);
         })
