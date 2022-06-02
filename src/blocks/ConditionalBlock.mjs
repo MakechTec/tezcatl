@@ -1,32 +1,51 @@
 
+import Id from "@makechtec/randomkey";
 import CLI from "../CLI.mjs";
+import Block from "./Block.mjs";
 
-export default class ConditionalBlock{
+export default class ConditionalBlock extends Block{
 
-    constructor(content){
-        this.content = content;
+    flagName;
+    ifcontent;
+    elsecontent = "";
+
+    getFinalContent(){
+        this.fillBlocks();
+        let result = CLI.isFlag(this.flagName);
+        
+        let newText = result ? this.ifcontent : this.elsecontent;
+        return "\n" + newText + "\n";
+    }
+
+    generateContentWithIds(){
+        let newContent = this.originalContent;
+        let numberOfIfs = this.countMatches(newContent, IF_PATTERN);
+
+        for(let i = 0; i < numberOfIfs; i++){
+            let ifBlock = extractConditionalBlock(newContent, Id.generate());
+            ifBlock.fillBlocks();
+            
+            newContent = newContent.replace(ifBlock.content, ifBlock.getFinalContent());
+        }
     }
 
     fillBlocks(){
-        this.extractFlag(this.content);
-        this.extractIfContent(this.content);
+        this.extractFlag();
+        this.extractIfContent();
 
-        if(this.content.includes(ELSE_STATEMENT)){
-            this.extractElseContent(this.content);
-        }
-        else{
-            this.elsecontent = "";
+        if(this.originalContent.includes(ELSE_STATEMENT)){
+            this.extractElseContent();
         }
     }
 
-    extractFlag(content){
-        let ifText = content.match(IF_STATEMENT);
+    extractFlag(){
+        let ifText = this.content.match(IF_STATEMENT);
         let flagName = ifText[0].replace("@if(", "").replace(")", "");
         this.flagName = flagName;
     }
 
-    extractIfContent(content){
-        let newContent = content;
+    extractIfContent(){
+        let newContent = this.content;
         let ifText = newContent.match(IF_PATTERN_GEN);
         newContent = newContent.replace(ifText[0], "");
 
@@ -40,8 +59,8 @@ export default class ConditionalBlock{
         }
     }
 
-    extractElseContent(content){
-        let newContent = content;
+    extractElseContent(){
+        let newContent = this.originalContent;
         let elseIndex = newContent.indexOf(ELSE_STATEMENT);
         let notUsedString = newContent.substring(0, elseIndex) + ELSE_STATEMENT;
 
@@ -49,14 +68,6 @@ export default class ConditionalBlock{
 
         let endIfIndex = newContent.indexOf(END_IF_STATEMENT);
         this.elsecontent = newContent.substring(0, endIfIndex);
-    }
-
-    getFinalContent(){
-        this.fillBlocks();
-        let result = CLI.isFlag(this.flagName);
-        
-        let newText = result ? this.ifcontent : this.elsecontent;
-        return "\n" + newText + "\n";
     }
 }
 
@@ -69,3 +80,12 @@ export const ELSE_STATEMENT = "@else";
 export const END_IF_STATEMENT = "@endif";
 
 export const IF_PATTERN_GEN = "\n*\s*@if\s*\(\s*.*\s*\)\s*\n*";
+
+export const extractConditionalBlock = (content) => {
+    let newContent = content;
+    let ifIndex = newContent.search(IF_PATTERN);
+    let endIfIndex = newContent.indexOf(END_IF_STATEMENT);
+
+    let contentWithCondition = newContent.substring(ifIndex, endIfIndex) + END_IF_STATEMENT;
+    return new ConditionalBlock(contentWithCondition);
+};

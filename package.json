@@ -29,5 +29,10 @@
   "bugs": {
     "url": "https://github.com/angeldomp49/tezcatl/issues"
   },
-  "homepage": "https://github.com/angeldomp49/tezcatl#readme"
+  "homepage": "https://github.com/angeldomp49/tezcatl#readme",
+  "dependencies": {
+    "@makechtec/pipe": "^1.0.1",
+    "@makechtec/randomkey": "^1.0.0",
+    "@makechtec/tezcatl-cli": "^1.0.1"
+  }
 }

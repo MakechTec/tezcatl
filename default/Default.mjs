@@ -1,7 +1,5 @@
-import CLI from "../src/CLI.mjs";
-import Pipe from "../src/pipe/Pipe.mjs";
-import Reader from "../src/Reader.mjs";
-import { Writter } from "../src/Writter.mjs";
+import CLI, {Reader, Writter} from "@makechtec/tezcatl-cli";
+import Pipe from "@makechtec/pipe/pipe";
 import BlockExtractor from "../src/blocks/BlockExtractor.mjs";
 
 export const Default = {

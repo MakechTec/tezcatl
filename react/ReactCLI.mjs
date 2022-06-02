@@ -1,9 +1,7 @@
-import CLI from "../src/CLI.mjs";
-import Reader from "../src/Reader.mjs";
-import { Writter } from "../src/Writter.mjs";
+import CLI, {Reader, Writter} from "@makechtec/tezcatl-cli";
 import * as reactConstants from "./constants.mjs";
 import BlockExtractor from "../src/blocks/BlockExtractor.mjs";
-import Pipe from "../src/pipe/Pipe.mjs";
+import Pipe from "@makechtec/pipe";
 
 export const ReactCLI = {
     run: function() {

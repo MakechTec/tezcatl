@@ -1,8 +1,9 @@
 import CLI from "../CLI.mjs";
 import Pattern from "../pattern/Pattern.mjs";
 import Argument from "../Argument.mjs";
+import Block from "./Block.mjs";
 
-export default class IterativeBlock{
+export default class IterativeBlock extends Block{
 
     constructor(content){
         this.content = content;
@@ -51,3 +52,12 @@ export default class IterativeBlock{
 export const FOREACH_STATEMENT = "@foreach\(.*\)";
 export const END_FOREACH_STATEMENT = "@endforeach";
 export const FOREACH_PATTERN_GEN = "\n*\s*@foreach\s*\(\s*.*\s*\)\s*\n*";
+
+export const extractIterativeBlock = (content) => {
+    let newContent = content;
+    let foreachIndex = newContent.search(FOREACH_PATTERN_GEN);
+    let endForeachIndex = newContent.indexOf(END_FOREACH_STATEMENT);
+
+    let contentWithFor = newContent.substring(foreachIndex, endForeachIndex) + END_FOREACH_STATEMENT;
+    return new IterativeBlock(contentWithFor);
+}
