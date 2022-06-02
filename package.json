@@ -35,6 +35,7 @@
   "dependencies": {
     "@makechtec/pipe": "^1.0.1",
     "@makechtec/randomkey": "^1.0.0",
-    "@makechtec/tezcatl-cli": "^1.0.1"
+    "@makechtec/tezcatl-cli": "^1.0.1",
+    "@makechtec/tezcatl-react": "^1.0.0"
   }
 }

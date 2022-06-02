@@ -1,6 +1,6 @@
 import CLIChooser from "./src/CLIChooser.mjs";
-import ReactCLI from "./react/ReactCLI.mjs";
-import DefaultCLI from "./default/DefaultCLI.mjs";
+import ReactCLI from "@makechtec/tezcatl-react";
+import DefaultCLI from "@makechtec/tezcatl-cli";
 
 CLIChooser.availableCLIs([
         {
