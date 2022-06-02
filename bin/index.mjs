@@ -1,11 +1,14 @@
 #! /usr/bin/env node
 
-import CLI from "../src/CLI.mjs";
-import ReactCLI from "../react/ReactCLI.mjs";
-import Default from "../default/Default.mjs";
+import fs from "node:fs";
+import { cwd } from "node:process";
 
-if(CLI.isFlag("react")) {
-    ReactCLI.run();
-} else {
-    Default.run();
+import CLIChooser from "../dist/cli-chooser";
+
+const config = cwd() + "/cli.config.js";
+
+if(fs.existsSync(config)){
+    let codeOfConfiguration = fs.readFileSync(config, "utf8");
+    eval(codeOfConfiguration);
+    CLIChooser.runCLI();
 }
