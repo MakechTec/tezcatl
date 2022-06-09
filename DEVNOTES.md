@@ -3,4 +3,4 @@
 tsc
 webpack
 npm install -g
-tezcatl name=jscomponent phcomponent=Test import1=react --class file=Test.js
+tezcatl template=jscomponent file=test/J.js --class const1=Navbar func1=toggle component=App

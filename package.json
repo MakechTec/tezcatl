@@ -30,7 +30,7 @@
   "homepage": "https://github.com/angeldomp49/tezcatl#readme",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.17.12",
-    "@makechtec/tezcatl-cli": "^1.0.4",
-    "@makechtec/tezcatl-preset-default": "^1.0.4"
+    "@makechtec/tezcatl-cli": "^1.0.6",
+    "@makechtec/tezcatl-preset-default": "^1.0.5"
   }
 }

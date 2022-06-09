@@ -1,11 +1,16 @@
-import CLI from "@makechtec/tezcatl-cli";
+import {CLI} from "@makechtec/tezcatl-cli";
 import {cwd} from "node:process";
 
 export class Chooser{
  
     find(){
-        let preset = CLI.getArgument("preset");
-        let presetLocation = PRESET_DIR_PREFIX + preset.name;
+        let preset = CLI.getArgumentValue("preset");
+
+        if(preset.value === ""){
+            preset.value = "default";
+        }
+
+        let presetLocation = PRESET_DIR_PREFIX + preset.value;
 
         import(presetLocation)
         .then(preset => {
