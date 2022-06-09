@@ -12,7 +12,7 @@ export class Chooser{
             preset.run();
         })
         .catch((error) => {
-            import("@makechtec/tezcatl-default")
+            import("@makechtec/tezcatl-preset-default")
             .then(defaultPreset => {
                 defaultPreset.run();
             })
