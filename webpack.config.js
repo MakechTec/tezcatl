@@ -4,8 +4,8 @@ module.exports = {
     mode: 'production',
     entry: "./prebuild/CLIChooser.js",
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: "cli-chooser.js",
+        path: path.resolve(__dirname),
+        filename: "index.js",
         library:{
             type: "commonjs-static",
         }

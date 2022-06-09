@@ -1,34 +1,29 @@
 import CLI from "@makechtec/tezcatl-cli";
+import {cwd} from "node:process";
 
 export class Chooser{
-    CLIs: Array<CLIConfig>;
+ 
+    find(){
+        let preset = CLI.getArgument("preset");
+        let presetLocation = PRESET_DIR_PREFIX + preset.name;
 
-    availableCLIs(CLIs: Array<CLIConfig> = []){
-        this.CLIs = CLIs;
-    }
-
-    runCLI(){
-        for(let i = 0; i < this.CLIs.length; i++){
-            let cli = this.CLIs[i];
-            if(CLI.isFlag(cli.flag)){
-                cli.entry.run();
-                break;
-            }
-        }
+        import(presetLocation)
+        .then(preset => {
+            preset.run();
+        })
+        .catch((error) => {
+            import("@makechtec/tezcatl-default")
+            .then(defaultPreset => {
+                defaultPreset.run();
+            })
+            .catch((error) => {
+                console.error("error trying to load default preset");
+                console.error(error);
+            });
+        });
     }
 };
 
-export interface CLIConfig{
-    name: string;
-    flag: string;
-    description: string;
-    entry: CLIRunner;
-}
-
-export interface CLIRunner{
-    run(): void;
-}
+export const PRESET_DIR_PREFIX = cwd() + "/node_modules/@makechtec/tezcatl-preset-";
 
 export const CLIChooser = new Chooser();
-
-export default CLIChooser;

@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "prebuild",
-    "module": "es2015",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "module":"CommonJS"
   },
   "files":[
     "./src/CLIChooser.ts",

@@ -1,9 +1,6 @@
 ## For development NOT FOR FINAL USERS!! ##
 
-to tsc
-
-    tsc
-
-then
-
-    webpack
+tsc
+webpack
+npm install -g
+tezcatl name=jscomponent phcomponent=Test import1=react --class file=Test.js
