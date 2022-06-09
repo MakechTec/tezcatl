@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "prebuild",
+    "moduleResolution": "node",
+    "module":"CommonJS"
+  },
+  "files":[
+    "./src/CLIChooser.ts",
+  ]
+}
