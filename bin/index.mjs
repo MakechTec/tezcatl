@@ -2,4 +2,19 @@
 
 import {CLIChooser} from "../index.js";
 
-CLIChooser.find();
+const p = CLIChooser.find();
+
+import(p)
+        .then(currentPreset => {
+            currentPreset.run();
+        })
+        .catch((error) => {
+            import("@makechtec/tezcatl-preset-default")
+            .then(defaultPreset => {
+                defaultPreset.run();
+            })
+            .catch((error) => {
+                console.error("error trying to load default preset");
+                console.error(error);
+            });
+        });
