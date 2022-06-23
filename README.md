@@ -1,8 +1,19 @@
 # Tezcatl #
 
-create file from template follow the example:
+### installation ###
 
-    $ npm install --global
+    $ npm install location=global
+
+### Configuration ###
+
+create a file called `tezcatl.config.json` in your home directory.
+
+    {
+        "preset": "default",
+    }
+
+the preset value is for select the preset configuration. By default it is `default`.
+
 
 Then:
 
