@@ -1,12 +1,13 @@
 import {CLI, Reader} from "@makechtec/tezcatl-cli";
 import {cwd} from "node:process";
 import {CONFIG_FILE} from "@makechtec/tezcatl-constants";
+import {Settings} from "@makechtec/tezcatl-settings";
 
 export class Chooser{
  
     find(){
 
-        let config = this.readConfig();
+        let config = Settings.get();
 
         let presetName = CLI.getArgumentValue("preset").value;
 
@@ -19,22 +20,6 @@ export class Chooser{
         }
 
         return presetName;
-    }
-
-    readConfig(){
-        let configFile = cwd() + "/" + CONFIG_FILE;
-        let content = Reader.read(configFile);
-
-        try{
-            return JSON.parse(content);
-        }
-        catch(e){
-            console.error(e);
-            return {
-                preset: ""
-            };
-        }
-
     }
 };
 

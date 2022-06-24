@@ -1,6 +1,6 @@
 {
   "name": "@makechtec/tezcatl",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "copy the specific file and change variables from comand params",
   "main": "bin/index.js",
   "bin": {
@@ -38,6 +38,7 @@
     "@makechtec/tezcatl-constants": "^1.0.0",
     "@makechtec/tezcatl-preset-default": "^1.0.5",
     "@makechtec/tezcatl-preset-puzzle": "^1.0.1",
-    "@makechtec/tezcatl-preset-react": "^1.0.1"
+    "@makechtec/tezcatl-preset-react": "^1.0.1",
+    "@makechtec/tezcatl-settings": "^1.0.1"
   }
 }
