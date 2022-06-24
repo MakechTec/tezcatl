@@ -1,22 +1,12 @@
 #! /usr/bin/env node
 
 import {CLIChooser} from "../index.js";
+import presets from "../presets.registry.js";
 
 const p = CLIChooser.find();
 
-console.log("importing preset: " + p);
+console.info("importing preset: " + p);
 
-import(p)
-        .then(currentPreset => {
-            currentPreset.run();
-        })
-        .catch((error) => {
-            import("@makechtec/tezcatl-preset-default")
-            .then(defaultPreset => {
-                defaultPreset.run();
-            })
-            .catch((error) => {
-                console.error("error trying to load default preset");
-                console.error(error);
-            });
-        });
+const selectedPreset = presets.find((preset) => preset.name === p);
+
+selectedPreset.cli.run();

@@ -18,9 +18,7 @@ export class Chooser{
             }
         }
 
-        let presetLocation = PRESET_DIR_PREFIX + presetName;
-
-        return presetLocation;
+        return presetName;
     }
 
     readConfig(){
@@ -39,7 +37,5 @@ export class Chooser{
 
     }
 };
-
-export const PRESET_DIR_PREFIX = "@makechtec/tezcatl-preset-";
 
 export const CLIChooser = new Chooser();
