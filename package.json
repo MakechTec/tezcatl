@@ -1,6 +1,6 @@
 {
   "name": "@makechtec/tezcatl",
-  "version": "1.4.6",
+  "version": "1.4.8",
   "description": "copy the specific file and change variables from comand params",
   "main": "bin/index.js",
   "bin": {
@@ -15,7 +15,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.18.0",
-    "@makechtec/tezcatl-preset-react": "^1.0.0",
+    "@makechtec/tezcatl-preset-react": "^1.0.1",
     "@types/node": "^18.0.0",
     "babel-loader": "^8.2.5",
     "typescript": "^4.7.2",
@@ -37,6 +37,7 @@
     "@babel/plugin-proposal-class-properties": "^7.17.12",
     "@makechtec/tezcatl-cli": "^1.0.9",
     "@makechtec/tezcatl-constants": "^1.0.0",
-    "@makechtec/tezcatl-preset-default": "^1.0.5"
+    "@makechtec/tezcatl-preset-default": "^1.0.5",
+    "@makechtec/tezcatl-preset-puzzle": "^1.0.1"
   }
 }
