@@ -40,6 +40,6 @@ export class Chooser{
     }
 };
 
-export const PRESET_DIR_PREFIX = "@makechtec/tezcatl-preset-";
+export const PRESET_DIR_PREFIX = cwd() + "/node_modules/@makechtec/tezcatl-preset-";
 
 export const CLIChooser = new Chooser();

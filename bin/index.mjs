@@ -4,6 +4,8 @@ import {CLIChooser} from "../index.js";
 
 const p = CLIChooser.find();
 
+console.log("importing preset: " + p);
+
 import(p)
         .then(currentPreset => {
             currentPreset.run();
