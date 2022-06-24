@@ -8,7 +8,7 @@ export class Chooser{
 
         let config = this.readConfig();
 
-        let presetName = CLI.getArgumentValue("preset");
+        let presetName = CLI.getArgumentValue("preset").value;
 
         if(presetName === ""){
             presetName = config.preset;
