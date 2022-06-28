@@ -1,6 +1,4 @@
-import {CLI, Reader} from "@makechtec/tezcatl-cli";
-import {cwd} from "node:process";
-import {CONFIG_FILE} from "@makechtec/tezcatl-constants";
+import {CLI} from "@makechtec/tezcatl-cli";
 import {Settings} from "@makechtec/tezcatl-settings";
 
 export class Chooser{

@@ -1,10 +1,11 @@
 {
   "name": "@makechtec/tezcatl",
-  "version": "1.4.11",
+  "version": "1.4.12",
   "description": "copy the specific file and change variables from comand params",
   "main": "bin/index.js",
   "bin": {
-    "tezcatl": "bin/index.mjs"
+    "tezcatl": "bin/index.mjs",
+    "tzl": "bin/index.mjs"
   },
   "scripts": {
     "compile": "tsc && webpack",
@@ -14,10 +15,10 @@
   "author": "makechtecnology",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-env": "^7.18.6",
     "@types/node": "^18.0.0",
     "babel-loader": "^8.2.5",
-    "typescript": "^4.7.2",
+    "typescript": "^4.7.4",
     "webpack-cli": "^4.10.0"
   },
   "repository": {
@@ -33,12 +34,11 @@
   },
   "homepage": "https://github.com/angeldomp49/tezcatl#readme",
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.17.12",
-    "@makechtec/tezcatl-cli": "^1.0.9",
-    "@makechtec/tezcatl-constants": "^1.0.0",
-    "@makechtec/tezcatl-preset-default": "^1.0.5",
-    "@makechtec/tezcatl-preset-puzzle": "^1.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@makechtec/tezcatl-cli": "^1.0.12",
+    "@makechtec/tezcatl-preset-default": "^1.0.6",
+    "@makechtec/tezcatl-preset-puzzle": "^1.1.2",
     "@makechtec/tezcatl-preset-react": "^1.0.1",
-    "@makechtec/tezcatl-settings": "^1.0.1"
+    "@makechtec/tezcatl-settings": "^1.0.3"
   }
 }
