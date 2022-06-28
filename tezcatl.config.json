@@ -1,0 +1,5 @@
+{
+    "preset": "puzzle",
+    "templateDir": "test/templates",
+    "file": "./test/J.js"
+}
