@@ -21,6 +21,7 @@ The config file use more options depending on the preset.
 
 Now the `tezcatl` and `tzl`commands are available from the cmd. 
 
-By default Tezcatl use the (tezcatl-preset-default)[https://github.com/MakechTec/tezcatl/documentation/presets.md] 
+By default Tezcatl use the [tezcatl-preset-default](https://github.com/MakechTec/tezcatl/documentation/presets.md)
 
-The Next Step is: (CLI usage)[https://github.com/MakechTec/tezcatl/documentation/cli-usage.md]
+
+The Next Step is: [CLI usage](https://github.com/MakechTec/tezcatl/documentation/cli-usage.md)

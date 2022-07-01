@@ -9,9 +9,7 @@ Also it is possible to contribute to the development of tezcatl. Or simply use i
 
 Summary:
 
-- (Installation and configuration)[https://github.com/MakechTec/tezcatl/documentation/installation.md]
-- (CLI usage)[https://github.com/MakechTec/tezcatl/documentation/cli-usage.md]
-- (template language)[https://github.com/MakechTec/tezcatl/documentation/template-language.md]
-- (presets)[https://github.com/MakechTec/tezcatl/documentation/presets.md]
-
-
+- [Installation and configuration](https://github.com/MakechTec/tezcatl/documentation/installation.md)
+- [CLI usage](https://github.com/MakechTec/tezcatl/documentation/cli-usage.md)
+- [template language](https://github.com/MakechTec/tezcatl/documentation/template-language.md)
+- [presets](https://github.com/MakechTec/tezcatl/documentation/presets.md)
