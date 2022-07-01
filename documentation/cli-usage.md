@@ -5,7 +5,7 @@ Tezcatl use the `tezcatl` command to work, the `tzl` is an alias.
 Tezcatl use commands created by the current preset and the current template. But in general the following
 are the three types of arguments passed.
 
-By default Tezcatl has the [tezcatl-preset-default](https://github.com/MakechTec/tezcatl/blob/master/documentation/presets.md)behavior.
+By default Tezcatl has the [tezcatl-preset-default](https://github.com/MakechTec/tezcatl/blob/master/documentation/presets.md) behavior.
 
 ### Flags ###
 
