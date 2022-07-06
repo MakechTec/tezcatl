@@ -1,6 +1,6 @@
 {
   "name": "@makechtec/tezcatl",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "description": "copy the specific file and change variables from comand params",
   "main": "bin/index.js",
   "bin": {
