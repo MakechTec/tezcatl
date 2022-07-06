@@ -38,7 +38,7 @@
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@makechtec/tezcatl-cli": "^1.0.13",
     "@makechtec/tezcatl-preset-default": "^1.0.6",
-    "@makechtec/tezcatl-preset-puzzle": "^1.1.4",
+    "@makechtec/tezcatl-preset-puzzle": "^1.1.5",
     "@makechtec/tezcatl-preset-react": "^1.0.1",
     "@makechtec/tezcatl-settings": "^1.0.3"
   }
